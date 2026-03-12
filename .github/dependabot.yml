@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "yearly"
+    allow:
+      # Allow both direct and indirect updates for all packages.
+      - dependency-type: "all"
+    ignore:
+      # This ignore rule doesn't seem to work
+      - dependency-name: "ocl_generators"
